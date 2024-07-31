@@ -37,6 +37,8 @@ class Test1Stack extends Stack {
 
 const app = new App();
 new Test1Stack(app, 'Test1Stack', {
-  // Uncomment and modify if needed to specify the environment
-  // env: { account: process.env.CDK_DEFAULT_ACCOUNT, region: process.env.CDK_DEFAULT_REGION },
+  env: {
+    account: '891376957718', // Your AWS Account ID
+    region: 'ap-south-1',    // Specify the region here
+  },
 });
