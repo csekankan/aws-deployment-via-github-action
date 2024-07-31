@@ -11,7 +11,7 @@ class Test1Stack extends Stack {
 
     // Define the Lambda function
     const testGitFunction = new lambda.Function(this, 'test_git', {
-      runtime: lambda.Runtime.NODEJS_14_X, // Choose the runtime, for example, Node.js 14
+      runtime: lambda.Runtime.NODEJS_16_X, // Choose the runtime, for example, Node.js 14
       code: lambda.Code.fromInline(`exports.handler = async function(event) {
         return {
             statusCode: 200,
