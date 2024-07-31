@@ -22,5 +22,4 @@ jobs:
 
       - name: Run Node.js script to print environment variables
         run: node a.js
-        env:
-          MY_SECRET: ${{ secrets.TEST }}
+  
