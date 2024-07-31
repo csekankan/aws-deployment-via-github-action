@@ -22,4 +22,5 @@ jobs:
 
       - name: Run Node.js script to print environment variables
         run: node a.js
-  
+        env:
+          TEST: ${{ vars.TEST }}
