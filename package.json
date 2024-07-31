@@ -1,15 +1,20 @@
 {
-  "name": "testing",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "test1",
+  "version": "0.1.0",
+  "bin": {
+    "test1": "bin/test1.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "scripts": {
+    "build": "echo \"The build step is not required when using JavaScript!\" && exit 0",
+    "cdk": "cdk",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "aws-cdk": "2.133.0",
+    "jest": "^29.7.0"
+  },
   "dependencies": {
-    "dotenv": "^16.4.5"
+    "aws-cdk-lib": "2.133.0",
+    "constructs": "^10.0.0"
   }
 }
