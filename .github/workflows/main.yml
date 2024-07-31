@@ -1,12 +1,15 @@
 name: Node.js Environment Variables
 
 on: [push]
+environment: test  # Specify the environment here
+env:
+          TEST: ${{ vars.TEST }}
+          SECRET: ${{ secrets.TEST }}
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: test  # Specify the environment here
-
+  
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -22,6 +25,4 @@ jobs:
 
       - name: Run Node.js script to print environment variables
         run: node a.js
-        env:
-          TEST: ${{ vars.TEST }}
-          SECRET: ${{ secrets.TEST }}
+       
