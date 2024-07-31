@@ -31,11 +31,13 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
 
-      - name: Run Node.js script to print environment variables
-        run: node a.js
-
+  
       - name: Synthesize CDK
         run: cdk synth
 
       - name: Deploy CDK
         run: cdk deploy --require-approval never
+
+      - name: Test 
+        run: node test.js
+
